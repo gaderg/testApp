@@ -1,0 +1,118 @@
+<ng-template #content let-modal>
+  <div class="modal-header text-center">
+    <div>
+        <h4 class="modal-title" id="modal-basic-title">Add new user</h4>
+    </div>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addDetails" (ngSubmit)="getUserDetails()">
+      <div class="form-group row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label for="fullName">Full Name </label>
+        </div>
+        <div class="col-md-5">
+          <input
+            type="text"
+            formControlName="name"
+            name="fullName"
+            id="fullName"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label for="dateOfBirth">Date of birth</label>
+        </div>
+        <div class="col-md-5">
+          <div class="input-group">
+            <input
+              id="dateOfBirth"
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+              ngbDatepicker
+              #dp="ngbDatepicker"
+              formControlName="date"
+              [minDate]="minDate"
+              [maxDate]="maxDate"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary calendar"
+                (click)="dp.toggle()"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3"><label>Languages </label></div>
+        <div class="col-md-5">
+          <ng-multiselect-dropdown
+            [settings]="dropdownSettings"
+            [data]="dropdownList"
+            formControlName="dropdownList"
+          >
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3"><label for="gender">Gender </label></div>
+        <div class="col-md-5">
+          <input
+            type="radio"
+            formControlName="gender"
+            name="gender"
+            value="male"
+          />
+          Male
+          <input
+            type="radio"
+            formControlName="gender"
+            name="gender"
+            value="female"
+          />
+          Female
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3"><label for="decript">About </label></div>
+        <div class="col-md-5">
+          <textarea
+            id="decript"
+            rows="3"
+            formControlName="decript"
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="modal-footer justify-content-center">
+          <button class="btn btn-outline-dark" [disabled]="!addDetails.valid">Save User</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<div class="user text-center">
+  <button
+    class="btn btn-lg btn-outline-secondary mt-3 d-inline-block"
+    (click)="open(content)"
+  >
+    Add User
+  </button>
+</div>

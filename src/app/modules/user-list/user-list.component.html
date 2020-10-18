@@ -1,0 +1,20 @@
+<h1 class="mt-3 mb-4">User List</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth Date</th>
+      <th>Language</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let users of usersArray">
+      <td>{{users.fullName}}</td>
+      <td>{{users.dob}}</td>
+      <td>{{users.language}}</td>
+      <td class="text-capitalize">{{users.gender}}</td>
+    </tr>
+    
+  </tbody>
+</table>

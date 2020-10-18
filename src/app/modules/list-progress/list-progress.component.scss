@@ -1,0 +1,13 @@
+.aside {
+    height: 100%;
+    .progress{
+        border-radius: 7px;
+        .progress-bar {
+            background: #aaaaaa;
+            border: 2px solid #000;
+            border-radius: 7px 0 0 7px;
+            height: 16px;
+        }
+    }
+    
+}

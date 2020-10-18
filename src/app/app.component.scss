@@ -1,0 +1,10 @@
+.container {
+    > .row {
+        border: 2px solid;
+        overflow: hidden;
+        .border-left {
+            border-left: 2px solid !important;
+            background: #d6d6d6;
+        }
+    }
+}

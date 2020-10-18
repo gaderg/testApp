@@ -1,0 +1,52 @@
+{
+  "userList": [
+    {
+      "id": 0,
+      "fullName": "Richard Lovelace",
+      "dob": "December 10, 1875",
+      "language": "Spanish, Latin",
+      "gender": "Male",
+      "description": "any"
+    },
+    {
+      "id": 1,
+      "fullName": "Grace Hopper",
+      "dob": "December 30, 1995",
+      "language": "Italian, French",
+      "gender": "Female",
+      "description": "any"
+    },
+    {
+      "id": 2,
+      "fullName": "Anu Emmanuel",
+      "dob": "August 20, 1992",
+      "language": "English, Spanish",
+      "gender": "Female",
+      "description": "any"
+    },
+    {
+      "fullName": "David Watson",
+      "dob": "October 16, 2020",
+      "language": " French, English(UK)",
+      "gender": "female",
+      "description": "I'm looking...",
+      "id": 3
+    },
+    {
+      "fullName": "A B Deviliers",
+      "dob": "August 12, 2020",
+      "language": " French, Latin",
+      "gender": "male",
+      "description": "Student",
+      "id": 4
+    },
+    {
+      "fullName": "Sachin Tendulakr",
+      "dob": "October 16, 1973",
+      "language": " English(US)",
+      "gender": "male",
+      "description": "I'm cricketer",
+      "id": 5
+    }
+  ]
+}

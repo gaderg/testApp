@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <app-user-list (sendData)='getData($event)'></app-user-list>
+    </div>
+    <div class="col-md-3 border-left">
+      <app-list-progress [userData]='allUserData'></app-list-progress>
+    </div>
+  </div>  
+  <div class="addUser">
+    <app-add-user></app-add-user>
+  </div>
+</div>
